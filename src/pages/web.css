@@ -1,0 +1,41 @@
+.web-services-2{
+    /* border: 1px solid red !important; */
+}
+.web-services-3 {
+    /* border:2px solid green; */
+    width: 45vw;
+    /* margin: ; */
+ margin-right: 2%;
+
+}
+.services-2-33 {
+    margin: 2%;
+}
+
+@media (max-width: 767px) {
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+ 
+  .web-services-3 {
+    /* border:2px solid green; */
+    width: 46vw;
+    height:11vh;
+    /* margin: ; */
+ margin-right: 3%;
+ border-radius: 4px;
+
+}
+.web-services-3 .services-4 {
+    font-size: 5.5px;
+    margin-top: 30px !important;
+    margin-bottom: 9px !important;
+}
+.web-services-3 .services-5 {
+    font-size: 4px;
+}
+.web-services-3 .services-6 {
+    font-size: 5px;
+    margin-top: 6px;
+}
+}

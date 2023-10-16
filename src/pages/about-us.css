@@ -1,0 +1,110 @@
+/* about-us.css */
+.about-us-container {
+    padding: 20px;
+  }
+  
+  .our-team {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  
+  .team-heading {
+    font-size: 70px;
+    margin-left: 150px;
+    color: white; /* Set text color to white */
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    /* margin-top: 50px; */
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .team-member-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* border: 1px solid red; */
+    width: 20vw;
+    height: 60vh;
+
+  }
+  
+  .team-member-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .team-member-info {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Set text color to white */
+  
+  }
+  .image-test {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0px !important;
+    width: 100% !important;
+    height: 80vh !important;
+  }
+  
+  .designation {
+    font-size: 16px;
+    color: white; /* Set text color to white */
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .team-members {
+      flex-direction: column; /* Stack boxes below each other */
+      align-items: center; /* Center boxes horizontally */
+     margin-top: 1px;
+    }
+  
+    .team-member-box {
+      margin-bottom: 20px; /* Add some space between boxes in mobile view */
+    }
+    .team-heading {
+        font-size: 24px;
+        margin-left: 40px;
+        margin: auto;
+        color: white; /* Set text color to white */
+      }
+      .image-test {
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 0px !important;
+        width: 100% !important;
+        height: 80vh !important;
+      }
+      .name { 
+        font-size: 12px;
+      }
+      .designation {
+        font-size: 10px;
+      }
+       
+  .team-member-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 50vw;
+    height: 40vh;
+
+  }
+  }
+  
