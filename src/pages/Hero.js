@@ -63,28 +63,30 @@ const Hero = () => {
   return (
     <div className="hero-1">
       <div className="hero-2">
-   
-      <img src={LOGO} onClick={()=>{navigate('/')}} className="hero-3"/>
+
+        <img src={LOGO} onClick={() => { navigate('/') }} className="hero-3" />
         <div className="hero-4">
-        {/* <video src={Video} controls autoPlay muted /> */}
+          {/* <video src={Video} controls autoPlay muted /> */}
           <div className="hero-5">
             <p>Home</p>
-            <a style={{color:"white", textDecoration: "none"}} href="#services-section" onClick={scrollToServices}>Services</a>
+            <a style={{ color: "white", textDecoration: "none" }} href="#services-section" onClick={scrollToServices}>Services</a>
+            <a style={{ color: "#2BB2FF", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
             <a
-      style={{ color: "white", textDecoration: "none",cursor:"pointer" }}
-      // href="#"
-      onClick={handleNavigate}
-    >
-      About
-    </a>
+              style={{ color: "white", textDecoration: "none", cursor: "pointer" }}
+              // href="#"
+              onClick={handleNavigate}
+            >
+              About
+            </a>
             {/* <p>Team</p> */}
-            <a style={{color:"white", textDecoration: "none"}} href="#contact-section" onClick={scrollToServices2}>Contact</a>
+            <a style={{ color: "white", textDecoration: "none" }} href="#contact-section" onClick={scrollToServices2}>Contact</a>
+        
           </div>
         </div>
       </div>
       {/* <div style={{width:"80%", margin:"auto", margin:"auto", marginTop:"30px"}}>
         <video  style={{width:"100%", margin:"auto", margin:"auto"}} src={Video} controls autoPlay loop muted /></div> */}
-      
+
       <div className="hero-hero-1">
         <div className="hero-hero-2">
           <div className="hero-hero-3">
@@ -93,13 +95,13 @@ const Hero = () => {
           </div>
           <div className="hero-hero-4"></div>
           <div className="hero-hero-5">
-            <p style={{textAlign:"center"}}>
-            One Crypto Ventures is a blockchain technology venture working in developing and launching Web3 projects through marketing, fundraising and technology.
+            <p style={{ textAlign: "center" }}>
+              One Crypto Ventures is a blockchain technology venture working in developing and launching Web3 projects through marketing, fundraising and technology.
             </p>
             <div className="hero-hero-6">
-              <button style={{cursor: "pointer", whiteSpace:"nowrap"}} onClick={scrollToServices2} className="partner-with-us">PARTNER WITH US</button>
+              <button style={{ cursor: "pointer", whiteSpace: "nowrap" }} onClick={scrollToServices2} className="partner-with-us">PARTNER WITH US</button>
               <button
-                style={{ cursor: "pointer",  whiteSpace:"nowrap" }}
+                style={{ cursor: "pointer", whiteSpace: "nowrap" }}
                 onClick={scrollToServices}
                 className="services"
               >
@@ -107,7 +109,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

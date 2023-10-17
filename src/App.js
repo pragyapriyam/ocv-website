@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import TrustedBy from "./pages/TrustedBy";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Web from "./pages/Web";
+import GovAdv from "./pages/GovAdv";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
           <div className="rights-reserved">2023 © One Crypto Ventures. All Rights Reserved.</div>
         </div>} />
         <Route path="/about-us" element={<AboutUs />} /> {/* Add the new route */}
-
+        <Route path="/gov-adv" element={<GovAdv />} /> {/* Add the new route */}
       </Routes>
     </Router>
   );

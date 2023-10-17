@@ -76,6 +76,7 @@ const AboutUs = () => {
               <a style={{ color: "white", textDecoration: "none" }} href="/">
                 Services
               </a>
+              <a style={{ color: "#2BB2FF", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
               <a
                 style={{ color: "white", textDecoration: "none" }}
                 // href="#"

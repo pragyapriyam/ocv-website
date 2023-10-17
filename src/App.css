@@ -5,6 +5,20 @@
   font-family: "Poppins";
 }
 
+.gov-con {
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  left: 48%;
+  top: 26%;
+}
+
+
+.gov-adv-container {
+  background: url("./assets/Group 1347 (1).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 input::placeholder {
   border: none !important;
 }
@@ -79,7 +93,7 @@ width: 6%;
 .hero-5 {
   height: 7vh;
   /* border: 1px solid red; */
-  width: 40%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -788,6 +802,25 @@ body {
 .App {
   font-family: "Poppins";
 }
+.gov-con {
+  cursor: pointer;
+  white-space: nowrap;
+  /* position: absolute; */
+  /* left: */
+  /* top:80%; */
+  /* top:200px; */
+  position: relative;
+  top: 240px;
+  left: 60px;
+  width: 50% !important;
+}
+
+.gov-adv-container-mobile {
+  background: url("./assets/Group 1351.png");
+  /* background: red; */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .date-settings {
   font-size: 4px;
   border: none;
@@ -1245,7 +1278,7 @@ margin-top: 33px !important;
 /* TrustedBy */
 /* TrustedBy */
 .trusted-by-container {
-  height: 20vh;
+  height: 23vh;
   /* border: 1px solid red; */
 
   width: 100%;
@@ -1270,7 +1303,7 @@ margin-top: 33px !important;
 .squares-container {
   display: flex;
   justify-content: space-around;
-  width: 85%;
+  width: 100%;
 }
 
 .square {
@@ -1300,7 +1333,21 @@ margin-top: 33px !important;
 .icon6 {
   background-image: url("https://hosting.renderforestsites.com/20194943/1030953/media/ec1a3743b0160f30345a12a3dd9a211e.png");
 }
-
+.icon7 {
+  background-image: url("./assets/CoinChum.png") !important;
+  width: 40px !important;
+  height: 30px !important;
+}
+.icon8 {
+  background-image: url("./assets/dexagon.png");
+  width: 40px !important;
+  height: 30px !important;
+}
+.icon9 {
+  background-image: url("./assets/solarshare.png");
+  width: 40px !important;
+  height: 30px !important;
+}
 /* contact us at www.renderfore */
 .contact-us {
   /* border: 1px solid red; */
