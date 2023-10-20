@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Laura from '../assets/laura.jpg'
 import Raymond from '../assets/raymond.jpg'
 import LOGO from '../assets/logo.png'
+import { useEffect } from "react";
+import { useState } from "react";
 const AboutUs = () => {
   //   const navigate = useNavigate();
 
@@ -63,20 +65,43 @@ const AboutUs = () => {
   const handleNavigate = () => {
     navigate("/about-us");
   };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if it's a mobile view based on screen width
+    const checkIsMobile = () => {
+        if (window.innerWidth <= 767) { // Adjust the width as needed
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    };
+
+    // Initial check
+    checkIsMobile();
+
+    // Attach event listener for window resize
+    window.addEventListener("resize", checkIsMobile);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+        window.removeEventListener("resize", checkIsMobile);
+    };
+}, []);
   return (
     <>
       <div className="heros-1">
         <div className="hero-2">
 
           <img src={LOGO} onClick={() => { navigate('/') }} className="hero-3" />
-          <div className="hero-4">
+          <div style={isMobile ? { width: "71vw" }: {}} className="hero-4">
             {/* <video src={Video} controls autoPlay muted /> */}
             <div className="hero-5">
               <a style={{ color: "white", textDecoration: "none" }} href="/">Home</a>
               <a style={{ color: "white", textDecoration: "none" }} href="/">
                 Services
               </a>
-              <a style={{ color: "#2BB2FF", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
+              <a style={{  color: "rgb(0, 102, 255)", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
               <a
                 style={{ color: "white", textDecoration: "none" }}
                 // href="#"

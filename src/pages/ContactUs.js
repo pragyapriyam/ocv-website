@@ -66,17 +66,17 @@ const ContactUs = () => {
         <div style={{ position: "relative", top: "-6px", height: "30vh" }} className="d2-1 d2-second  d-366">
           {/* <div className="d2-second-mail">Mail</div> */}
    
-          <div style={{ color: "rgb(115, 226, 255)", whiteSpace:"nowrap" }}>
+          <div style={{ color: "rgb(0, 102, 255)", whiteSpace:"nowrap" }}>
             Dubai (UAE)
           </div>
-          <div onClick={()=>{ window.open('https://t.me/+1x3KYDNSiAszYzRk', '_blank');}} style={{ color: "rgb(115, 226, 255)", whiteSpace:"nowrap", marginTop:"8px", cursor:"pointer", color:"white" }}>
+          <div onClick={()=>{ window.open('https://t.me/+1x3KYDNSiAszYzRk', '_blank');}} style={{ color: "rgb(0, 102, 255)", whiteSpace:"nowrap", marginTop:"8px", cursor:"pointer", color:"white" }}>
             
             Contact us directly
           </div>
-          <div  style={{ color: "rgb(115, 226, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
+          <div  style={{ color: "rgb(0, 102, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
           Privacy Policy
           </div>
-          <div  style={{ color: "rgb(115, 226, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
+          <div  style={{ color: "rgb(0, 102, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
          Cookies Policy
           </div>
          

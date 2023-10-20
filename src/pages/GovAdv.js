@@ -80,7 +80,7 @@ const GovAdv = () => {
                                     <a style={{ color: "white", textDecoration: "none" }} href="/">
                                         Services
                                     </a>
-                                    <a style={{ color: "#2BB2FF", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
+                                    <a style={{ color: "rgb(0, 102, 255)", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
                                     <a
                                         style={{ color: "white", textDecoration: "none" }}
                                         // href="#"
@@ -98,13 +98,27 @@ const GovAdv = () => {
         <video  style={{width:"100%", margin:"auto", margin:"auto"}} src={Video} controls autoPlay loop muted /></div> */}
 
                     </div>
-                    <div style={{ height: "80vh" }} className="about-ufs-container hero-hero-6">
-                        <button onClick={scrollToServices2} className="gov-con partner-with-us">Contact us for more information</button>
+                    <div style={{ height: "80vh" }} className="aboddut-udfs-container hero-dherod-6">
+                        <div className="content-wrapper">
+                            <div style={{ fontWeight: "600", fontSize: "39px", color: "white"}}>Government Advisory</div>
+                            <div style={{ color: "white", marginTop: "33px", fontSize:"19px" }}>We are working towards revolutionizing economies
+                                by helping governments and cities to effectively
+                                transition to a web3 economy through unique
+                                proprietary initiatives and projects designed for
+                                transformational impact.
+                           {/* <br /> */}
+                                <div style={{marginTop:"13px"}}>Please reach out for more information on how we
+can help and add tangible value.</div>
+                                </div>
+
+                            <button onClick={scrollToServices2} className="gov-con partner-with-us">Contact us for more information</button>
+                        </div>
+
 
 
                     </div>
                 </div> :
-                <div  className="gov-adv-container-mobile">
+                <div className="gov-adv-container-mobile">
                     <div className="heros-1">
                         <div className="hero-2">
 
@@ -134,7 +148,12 @@ const GovAdv = () => {
         <video  style={{width:"100%", margin:"auto", margin:"auto"}} src={Video} controls autoPlay loop muted /></div> */}
 
                     </div>
-                
+                    <div style={{ height: "80vh" }} className="about-ufs-container hero-hero-6">
+                        {/* <button onClick={scrollToServices2} className="gov-con partner-with-us">Contact us for more information</button> */}
+                        <div onClick={scrollToServices2} style={{ height: "14vh", width: "100%", position: "relative", top: "200px" }}></div>
+
+
+                    </div>
                 </div>}
 
         </>

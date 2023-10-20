@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Video from "../assets/video.mp4";
 import { useNavigate } from "react-router-dom";
 import LOGO from '../assets/logo.png'
@@ -55,22 +55,43 @@ const Hero = () => {
     }
   };
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleNavigate = () => {
     navigate("/about-us");
   };
+  useEffect(() => {
+    // Check if it's a mobile view based on screen width
+    const checkIsMobile = () => {
+        if (window.innerWidth <= 767) { // Adjust the width as needed
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    };
 
+    // Initial check
+    checkIsMobile();
+
+    // Attach event listener for window resize
+    window.addEventListener("resize", checkIsMobile);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+        window.removeEventListener("resize", checkIsMobile);
+    };
+}, []);
   return (
     <div className="hero-1">
       <div className="hero-2">
 
         <img src={LOGO} onClick={() => { navigate('/') }} className="hero-3" />
-        <div className="hero-4">
+        <div style={isMobile ? { width: "71vw" }: {}} className="hero-4">
           {/* <video src={Video} controls autoPlay muted /> */}
           <div className="hero-5">
             <p>Home</p>
             <a style={{ color: "white", textDecoration: "none" }} href="#services-section" onClick={scrollToServices}>Services</a>
-            <a style={{ color: "#2BB2FF", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
+            <a style={{  color: "rgb(0, 102, 255)", textDecoration: "none" }} href="/gov-adv" onClick={scrollToServices2}>Government Advisory</a>
             <a
               style={{ color: "white", textDecoration: "none", cursor: "pointer" }}
               // href="#"

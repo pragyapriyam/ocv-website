@@ -8,12 +8,32 @@
 .gov-con {
   cursor: pointer;
   white-space: nowrap;
-  position: relative;
+  /* position: relative;
   left: 48%;
-  top: 26%;
+  top: 26%; */
+  padding: 0px 0px;
+  /* width: 30%; */
+  /* border-radius: 25px; */
+  /* background: linear-gradient(180deg, #73e2ff, #06f 96%); */
+  border: none;
+  color: white;
+  /* letter-spacing: 0.8px; */
+  font-size: 16px;
+  background-color: transparent;
+  margin-top: 33px;
+
 }
-
-
+.gov-con:hover {
+  color: rgb(0, 102, 255);
+}
+.content-wrapper {
+  /* border:1px solid red; */
+  width:45%;
+  margin: auto;
+  position: relative;
+  left: 19%;
+  top: 15%;
+}
 .gov-adv-container {
   background: url("./assets/Group 1347 (1).png");
   background-size: contain;
@@ -193,10 +213,12 @@ body::-webkit-scrollbar {
 
 .services-1 {
   height: 65vh;
-  background: url("./assets/component2.jpg");
+  background: url("./assets/Untitled design (21).png");
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .services-1-test {
   height: 65vh;
@@ -293,7 +315,7 @@ margin-top: 33px !important;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: #73e2ff;
+  color: rgb(0, 102, 255);
 }
 .special {
   width: 90%;
@@ -304,7 +326,7 @@ margin-top: 33px !important;
   align-items: center;
   justify-content: flex-start;
   height: 15vh;
-  color: #73e2ff;
+  color: rgb(0, 102, 255);
   font-size: 14px;
   width: 80%;
   /* border: 1px solid red; */
@@ -813,10 +835,11 @@ body {
   top: 240px;
   left: 60px;
   width: 50% !important;
+  
 }
 
 .gov-adv-container-mobile {
-  background: url("./assets/Group 1351.png");
+  background: url("./assets/iPhone 14 & 15 Pro Max - 2.png");
   /* background: red; */
   background-size: contain;
   background-repeat: no-repeat;
@@ -978,11 +1001,13 @@ body::-webkit-scrollbar {
 
 .services-1 {
   height: 22vh;
-  background: url("./assets/component2.jpg");
+  background: url("./assets/Untitled design (21).png");
   display: flex;
   align-items: center;
   /* border: 1px solid rgb(0, 255, 94); */
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .services-1-test {
   height: 31vh;
@@ -1102,7 +1127,7 @@ margin-top: 33px !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #73e2ff;
+  color: rgb(0, 102, 255) !important;
   width: 76vw;
 }
 .special {
@@ -1114,7 +1139,7 @@ margin-top: 33px !important;
   align-items: center;
   justify-content: center;
   height: 10vh;
-  color: #73e2ff; 
+  color: rgb(0, 102, 255) !important;
   font-size: 13.5px;
   margin: auto;
   width: 95%;

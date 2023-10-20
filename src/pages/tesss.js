@@ -50,16 +50,16 @@
         <div style={{ position: "relative", top: "-6px", height: "14vh" }} className="d2-1 d2-second  d-366">
           {/* <div className="d2-second-mail">Mail</div> */}
    
-          <div style={{ color: "rgb(115, 226, 255)" }}>
+          <div style={{ color: "rgb(0, 102, 255)" }}>
             Dubai (UAE)
           </div>
-          <div  onClick={() => {  window.open('https://t.me/+1x3KYDNSiAszYzRk', '_blank'); }} style={{ color: "rgb(115, 226, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
+          <div  onClick={() => {  window.open('https://t.me/+1x3KYDNSiAszYzRk', '_blank'); }} style={{ color: "rgb(0, 102, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
          Contact Us for a free consultation >
           </div>
-          <div  style={{ color: "rgb(115, 226, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
+          <div  style={{ color: "rgb(0, 102, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
           Privacy Policy
           </div>
-          <div  style={{ color: "rgb(115, 226, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
+          <div  style={{ color: "rgb(0, 102, 255)", cursor: "pointer", marginTop:"10px", whiteSpace:"nowrap" }}>
          Cookies Policy
           </div>
          
