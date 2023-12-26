@@ -1,5 +1,5 @@
 import React from "react";
-import Video from "../assets/video.mp4";
+import Video from "../assets/ergwf.mp4";
 const KnowMore = () => {
   return (
     <div className="know-more-container">

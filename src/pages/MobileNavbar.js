@@ -1,0 +1,66 @@
+import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import LOGO from '../assets/logo.png';
+
+const MobileNavbar = () => {
+  const navigate = useNavigate();
+  const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const handleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setShowDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    setShowDropdown(false);
+  };
+
+  return (
+    <div className="narbar2-container">
+      <div className="navbar2-logo">
+        <div className="navbar2-image-container">
+          <img src={LOGO} alt="Logo" />
+        </div>
+      </div>
+      <div className="navbar2-hamburger" onClick={handleDropdown}>
+        <div className="navbar2-hamburger-container">
+          <svg
+            width="35"
+            height="10"
+            viewBox="0 0 35 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="1" x2="35" y2="1" stroke="white" strokeWidth="2" />
+            <line x1="13" y1="9" x2="35" y2="9" stroke="white" strokeWidth="2" />
+          </svg>
+        </div>
+      </div>
+      {showDropdown && (
+        <div className="navbar-dropdown" ref={dropdownRef}>
+          <ul>
+            <li onClick={() => handleNavigation("/contact-us")}>Contact Us</li>
+            <li onClick={() => handleNavigation("/government-advisory")}>Government Advisory</li>
+            <li onClick={() => handleNavigation("/team")}>Team</li>
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default MobileNavbar;

@@ -1,7 +1,7 @@
 import "./App.css";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import Hero from "./pages/Hero";
+import Navbar from "./pages/Navbar";
 import KnowMore from "./pages/KnowMore";
 import Marketing from "./pages/Marketing";
 import ScrollComponent from "./pages/ScrollComponent";
@@ -10,42 +10,165 @@ import TrustedBy from "./pages/TrustedBy";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Web from "./pages/Web";
 import GovAdv from "./pages/GovAdv";
-
+import Concept from "./pages/Concept";
+import Services2 from "./pages/Services2";
+import WebSection from "./pages/WebSection";
+import VideoSection from "./pages/VideoSection";
+import Articles from "./pages/Articles";
+import TrustedBySection from "./pages/TrustedBySection";
+import FooterNew from "./pages/FooterNew";
+import GovAdvNew from "./pages/GovAdvNew";
+import NavbarGov from "./pages/NavbarGov";
+import TeamsNew from "./pages/Teams";
+import ContactUsPage from "./pages/ContactUsPage";
+import { useEffect, useState } from "react";
+import MobileNavbar from "./pages/MobileNavbar";
+import MobileConcept from "./pages/MobileConcept";
+import MobileServices from "./pages/MobileServices";
+import MobileWebSection from "./pages/MobileWebSection";
+import MobileVideoSection from "./pages/MobileVideoSection";
+import MobileArticles from "./pages/MobileArticles";
+import MobileFooter from "./pages/MobileFooter";
+// import Video from "../assets/ergwf.mp4";
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Example threshold for mobile view
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Update state based on window width
+    };
+
+    window.addEventListener("resize", handleResize); // Listen for window resize events
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up event listener
+    };
+  }, []);
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<div className="App">
-          <Hero />
-          <Services
-            header="Services"
-            body="We know that all projects are not created equal. We also know that each country or municipality we work with has different needs and necessities. That’s why we embrace a focused and individualized approach as our modus operandi. "
-            button="Learn more"
-            background=""
-          />
-          <Marketing />
-          <ScrollComponent />
+      {!isMobile ? <Routes>
+        <Route path="/" element={
 
-          <Web
-            header="Web3 Needs Easier Language"
-            button="Read our articles"
-            background=""
-            body="Web3 Needs Easier Language to Reach Mass Adoption and onboard the next Million users. Web3 is the next generation of the internet, built on..."
-          />
-          <KnowMore />
-          <TrustedBy />
-          <ContactUs />
 
-          {/* <div className="legal-advice">
-              <p>Legal</p>
-              <p>Privacy Policy</p>
-              <p>Cookies Policy</p>
-            </div> */}
-          <div className="rights-reserved">2023 © One Crypto Ventures. All Rights Reserved.</div>
-        </div>} />
-        <Route path="/about-us" element={<AboutUs />} /> {/* Add the new route */}
-        <Route path="/gov-adv" element={<GovAdv />} /> {/* Add the new route */}
-      </Routes>
+
+          <div className="App">
+            <div className="navplusconcept">
+              <Navbar />
+              <Concept />
+            </div>
+            <Services2 />
+            <WebSection />
+            <VideoSection />
+            <Articles />
+            <TrustedBySection />
+            <FooterNew />
+          </div>} />
+        <Route path="/gov-adv" element={
+
+          <div className="App">
+            <div className="navplusconceptgov">
+              <NavbarGov />
+              {/* <Concept /> */}
+              <GovAdvNew />
+
+            </div>
+            <FooterNew />
+
+          </div>
+
+        } /> {/* Add the new route */}
+
+
+        <Route path="/teams" element={
+
+          <div className="App">
+            <div className="navplusconceptteams">
+              <NavbarGov />
+              {/* <Concept /> */}
+              {/* <GovAdvNew /> */}
+              <TeamsNew />
+
+            </div>
+            <FooterNew />
+
+          </div>
+
+        } /> {/* Add the new route */}
+
+
+        <Route path="/contact-us" element={
+
+          <div className="App">
+            <div className="navplusconceptcontactus">
+              <NavbarGov />
+              {/* <Concept /> */}
+              {/* <GovAdvNew /> */}
+              <ContactUsPage />
+
+            </div>
+            <FooterNew />
+
+          </div>
+
+        } /> {/* Add the new route */}
+
+
+      </Routes> :
+        <Routes>
+          <Route path="/"  element={
+
+
+
+<div className="App">
+  <div className="navplusconcept">
+    <MobileNavbar />
+    {/* <Concept /> */}
+  </div>
+  <MobileConcept />
+  <MobileServices />
+  {/* <Services2 /> */}
+  <MobileWebSection />
+  <MobileVideoSection />
+  {/* <WebSection /> */}
+  {/* <VideoSection /> */}
+  <MobileArticles />
+  {/* <Articles /> */}
+  {/* <TrustedBySection /> */}
+  <MobileFooter />
+  {/* <FooterNew /> */}
+</div>} />
+          <Route path="/gov-adv" element={
+
+            <div className="App">
+              <div className="navplusconceptgov">
+                <NavbarGov />
+                <GovAdvNew />
+              </div>
+              <FooterNew />
+            </div>
+          } /> 
+          <Route path="/teams" element={
+            <div className="App">
+              <div className="navplusconceptteams">
+                <NavbarGov />
+                <TeamsNew />
+              </div>
+              <FooterNew />
+            </div>
+
+          } />
+          <Route path="/contact-us" element={
+            <div className="App">
+              <div className="navplusconceptcontactus">
+                <NavbarGov />
+                <ContactUsPage />
+              </div>
+              <FooterNew />
+            </div>
+
+          } />
+        </Routes>
+      }
     </Router>
   );
 }
