@@ -10,31 +10,36 @@ const TeamsNew = ({ header, body, button }) => {
   return (
    <div className="teams-new">
     <div className="teams-new-header"></div>
-    <div onClick={
+    <div style={{cursor:"pointer"}} onClick={
         ()=>{
             setRaymondRattiClicked(!raymondRattiClicked)
+            window.location.replace("https://www.linkedin.com/in/raymondratti/")
         }
-    } className={!raymondRattiClicked? "raymond-ratti-1":"raymond-ratti-2"}></div>
-    <div onClick={
+    }  className={!raymondRattiClicked? "raymond-ratti-2":"raymond-ratti-2"}></div>
+    <div  style={{cursor:"pointer"}} onClick={
         ()=>{
             setLauraClicked(!lauraClicked)
+            window.location.replace("https://www.linkedin.com/in/laurasuarezleon/")
         }
-    }  className={!lauraClicked? "lauraa-1":"lauraa-2"}></div>
-    <div   onClick={
+    }  className={!lauraClicked? "lauraa-2":"lauraa-2"}></div>
+    <div  style={{cursor:"pointer"}}   onClick={
         ()=>{
             setMatiaClicked(!matiaClicked)
+            window.location.replace("https://www.linkedin.com/in/mattia-ingenito/")
         }
-    }  className={!matiaClicked? "mattia-1":"mattia-2"}></div>
-    <div  onClick={
+    }  className={!matiaClicked? "mattia-2":"mattia-2"}></div>
+    <div  style={{cursor:"pointer"}}  onClick={
         ()=>{
             setPragyaClicked(!pragyaClicked)
+            window.location.replace("https://www.linkedin.com/in/pragyapriyam/")
         }
-    } className={!pragyaClicked? "pragya-1":"pragya-2"}></div>
-    <div onClick={
+    } className={!pragyaClicked? "pragya-2":"pragya-2"}></div>
+    <div  style={{cursor:"pointer"}} onClick={
         ()=>{
             setEricClicked(!ericClicked)
+            window.location.replace("https://www.linkedin.com/in/eric-brito-634925292/")
         }
-    } className={!ericClicked? "eric-1":"eric-2"}></div>
+    } className={!ericClicked? "eric-2":"eric-2"}></div>
    </div>
   );
 };

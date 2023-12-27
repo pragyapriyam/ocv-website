@@ -29,6 +29,9 @@ import MobileWebSection from "./pages/MobileWebSection";
 import MobileVideoSection from "./pages/MobileVideoSection";
 import MobileArticles from "./pages/MobileArticles";
 import MobileFooter from "./pages/MobileFooter";
+import MobileGovAdv from "./pages/MobileGovAdv";
+import MobileTeamsNew from "./pages/MobileTeamsNew";
+import MobileContactUsPage from "./pages/MobileContactUsPage";
 // import Video from "../assets/ergwf.mp4";
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Example threshold for mobile view
@@ -139,34 +142,43 @@ function App() {
 </div>} />
           <Route path="/gov-adv" element={
 
-            <div className="App">
-              <div className="navplusconceptgov">
-                <NavbarGov />
-                <GovAdvNew />
-              </div>
-              <FooterNew />
-            </div>
-          } /> 
+
+
+<div className="App">
+  <div className="navplusconcept">
+    <MobileNavbar />
+  </div>
+  <MobileGovAdv />
+  <MobileFooter />
+</div>} /> 
           <Route path="/teams" element={
-            <div className="App">
-              <div className="navplusconceptteams">
-                <NavbarGov />
-                <TeamsNew />
-              </div>
-              <FooterNew />
-            </div>
 
-          } />
-          <Route path="/contact-us" element={
-            <div className="App">
-              <div className="navplusconceptcontactus">
-                <NavbarGov />
-                <ContactUsPage />
-              </div>
-              <FooterNew />
-            </div>
 
-          } />
+
+<div className="App">
+  <div className="navplusconcept">
+    <MobileNavbar />
+  </div>
+ <MobileTeamsNew/>
+  <MobileFooter />
+</div>} />
+          <Route path="/contact-us" 
+          
+          element={
+
+
+
+            <div className="App">
+              <div className="navplusconcept">
+                <MobileNavbar />
+              </div>
+              <MobileContactUsPage />
+              <MobileFooter />
+            </div>}
+          
+          
+          
+          />
         </Routes>
       }
     </Router>

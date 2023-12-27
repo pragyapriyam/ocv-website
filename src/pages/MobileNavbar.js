@@ -36,7 +36,7 @@ const MobileNavbar = () => {
           <img src={LOGO} alt="Logo" />
         </div>
       </div>
-      <div className="navbar2-hamburger" onClick={handleDropdown}>
+     {!showDropdown &&  <div className="navbar2-hamburger" onClick={handleDropdown}>
         <div className="navbar2-hamburger-container">
           <svg
             width="35"
@@ -49,13 +49,16 @@ const MobileNavbar = () => {
             <line x1="13" y1="9" x2="35" y2="9" stroke="white" strokeWidth="2" />
           </svg>
         </div>
-      </div>
+      </div>}
       {showDropdown && (
         <div className="navbar-dropdown" ref={dropdownRef}>
           <ul>
-            <li onClick={() => handleNavigation("/contact-us")}>Contact Us</li>
-            <li onClick={() => handleNavigation("/government-advisory")}>Government Advisory</li>
-            <li onClick={() => handleNavigation("/team")}>Team</li>
+            <li onClick={() => handleNavigation("/")}>Home</li>
+            <li style={{marginTop: "14px"}} onClick={() => handleNavigation("/gov-adv")}>Government Advisory</li>
+            <li style={{marginTop: "14px"}}  onClick={() => handleNavigation("/teams")}>Team</li>
+            <li style={{marginTop: "14px"}}  onClick={() => handleNavigation("/contact-us")}>Contact Us</li>
+
+            {/* <li style={{marginTop: "14px"}}  onClick={() => handleNavigation("/team")}>Team</li> */}
           </ul>
         </div>
       )}
