@@ -30,7 +30,7 @@ const MobileContactUsPage = ({ header, body, button }) => {
     <div className="contact-new">
       <div className="contact-new-header"></div>
       <div className="contact-new-form">
-        <form onSubmit={handleSubmit}>
+        <form style={{width:"100%"}} onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="firstName">First Name *</label>
@@ -80,6 +80,7 @@ const MobileContactUsPage = ({ header, body, button }) => {
           <div className="form-group">
             <label htmlFor="message">Your Message</label>
             <textarea
+            style={{height:"10vh"}}
               id="message"
               name="message"
               rows="4"

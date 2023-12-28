@@ -13,6 +13,9 @@ const MobileArticles = ({ header, body, button }) => {
     <div onClick={()=>{
       window.location.replace("https://www.linkedin.com/pulse/storytelling-crypto-how-tell-stories-captivate-your-mcznc/")
     }} className="mobile-article-3"></div>
+     <div onClick={()=>{
+      window.location.replace("https://medium.com/@onecryptoventures")
+    }} className="mobile-article-4"></div>
    </div>
   );
 };
