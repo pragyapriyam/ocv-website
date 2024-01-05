@@ -4,7 +4,7 @@ const VideoSection = ({ header, body, button }) => {
   return (
     <div className="video-section">
 
-<video  style={{width:"100%",margin:"auto"}} src={Video} autoPlay loop muted />
+<video  style={{width:"100%",margin:"auto"}} src={Video} controls autoPlay loop muted />
     </div>
   );
 };

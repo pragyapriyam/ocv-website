@@ -71,13 +71,25 @@ html {
 
 /* concept page  */
 .concept-page {
-  height: 90vh;
+  height: 68vh;
   /* border: 1px solid red; */
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding-top: 10vh;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 5s infinite linear; /* Change duration or animation type as needed */
 }
 .navplusconcept {
   background: url("./assets/ttytyydf.png");
@@ -414,10 +426,10 @@ justify-content: center;
 /* .trusted-by-2  */
 .trusted-by-2 {
   width: 100%;
-  margin-top: 8vh;
+  margin-top: 1vh;
 
 
-  height: 90vh;
+  height: 70vh;
   background: url("./assets/ergegrt.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -499,7 +511,7 @@ background-position-x: 71.9%;
   width:100%;
   height: 120vh;
   /* border: 1px solid red; */
-  background: url("./assets/wgkentgwefdjg.png");
+  background: url("./assets/dfjgdfg.png");
   margin-top: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
@@ -625,7 +637,7 @@ background-position-x: 75.3%;
 .contact-new-header {
   width: 55%;
   height: 30vh;
-  background: url("./assets/dfsghjkjhgdfg.png");
+  background: url("./assets/wdfsfweif.png");
   background-size: contain;
   background-repeat: no-repeat;
   padding: 0% 10%;
@@ -843,8 +855,10 @@ cursor: pointer;
 width: 100%;
 height: 45vh;
 /* border: 1px solid red; */
-background: url("./assets/mobile-concept2.png");
+background: url("./assets/dfmsamedfse.png");
 background-size: contain;
+display: flex;
+align-items: flex-end;
 background-repeat: no-repeat;
 }
 .services-mobile-container {
@@ -1051,7 +1065,7 @@ background-position-x: center;
 }
 
 .mobile-teams-block-3 {
-  background: url("./assets/gsfgerfdcv.png");
+  background: url("./assets/sfwefwef.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
@@ -1256,7 +1270,7 @@ background-position-x: center;
 .contact-new-header {
   width: 100%;
   height: 8vh;
-  background: url("./assets/gsrgrtgderf.png");
+  background: url("./assets/fwefwee3.png");
   background-size: contain;
   background-repeat: no-repeat;
   padding: 0% 0%;
@@ -1460,6 +1474,52 @@ textarea {
     /* padding-top: 15px; */
   
   }
+
+.articles-section {
+  /* border: 1px solid red; */
+}
+
+.desktop-article-1 {
+  /* border: 1px solid red; */
+  width: 97%;
+  height: 31vh;
+  position: relative;
+  top: 15%;
+  cursor: pointer;
+}
+
+.desktop-article-2 {
+  /* border: 1px solid red; */
+  width: 97%;
+  height: 31vh;
+  position: relative;
+  top: 15%;
+  cursor: pointer;
+}
+.desktop-article-3 {
+  /* border: 1px solid red; */
+  width: 97%;
+  height: 31vh;
+  position: relative;
+  top: 15%;
+  cursor: pointer;
+}
+
+.desktop-article-4 {
+  /* border: 1px solid red; */
+  width: 97%;
+  height: 31vh;
+  position: relative;
+  cursor: pointer;
+  top: 15%;
+}
+
+
+
+
+
+
+
 
 
 }

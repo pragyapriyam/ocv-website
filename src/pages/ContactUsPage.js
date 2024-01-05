@@ -1,30 +1,40 @@
 import React, { useState } from "react";
+import { getDatabase, ref, push } from "firebase/database"; // Import necessary Firebase modules
 
 const ContactUsPage = ({ header, body, button }) => {
-    const initialFormData = {
-        firstName: "",
-        lastName: "",
-        email: "",
-        website: "",
-        message: "",
-      };
-      const [formData, setFormData] = useState({ ...initialFormData });
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        // Handle form submission logic here
-        console.log(formData); // For example, log the form data
-    
-        // Reset form fields to initial values
-        setFormData({ ...initialFormData });
-      };
-      const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: value,
-        }));
-      };
-    
+  const initialFormData = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    website: "",
+    message: "",
+  };
+  const [formData, setFormData] = useState({ ...initialFormData });
+
+  // Replace this with your Firebase configuration and initialization
+  // Initialize Firebase app - Replace with your Firebase setup code
+  // const firebaseConfig = { apiKey: "...", authDomain: "...", databaseURL: "...", ... };
+  // firebase.initializeApp(firebaseConfig);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Store form data to Firebase
+    const database = getDatabase(); // Get reference to the Firebase database
+    const formDataRef = ref(database, "form_data"); // Reference to a specific node in the database
+    await push(formDataRef, formData); // Push form data to Firebase
+
+    // Reset form fields to initial values
+    setFormData({ ...initialFormData });
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   return (
     <div className="contact-new">

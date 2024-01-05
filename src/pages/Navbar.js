@@ -33,7 +33,9 @@ const MobileNavbar = () => {
     <div className="narbar2-container">
       <div className="navbar2-logo">
         <div className="navbar2-image-container">
-          <img src={LOGO} alt="Logo" />
+          <img style={{cursor:"pointer"}} onClick={()=>{
+            window.location.replace("/")
+          }} src={LOGO} alt="Logo" />
         </div>
       </div>
      {!showDropdown &&  <div className="navbar2-hamburger" onClick={handleDropdown}>

@@ -1,0 +1,30 @@
+1. Added the click listener to the first article (Crypto Influencers)in Articles section for desktop view
+2. Added the click listener to the second article (How to Build) in Articles section for desktop view
+3. Added the click listener to the third article (Storytelling in Crypto) in Articles section for desktop view
+4. Added the click event to the Articles section "Read More Articles" button for desktop view
+5. Implemented the feature in desktop view to navigate the user back to the home screen when user clicks on the navbar OCV logo for the 
+desktop view screens - Teams page, Contact page, home page and gov advisory page
+6. Implemented the feature in mobile view to navigate the user back to the home screen when user clicks on the navbar OCV logo for the 
+desktop view screens - Teams page, Contact page, home page and gov advisory page
+7. Fixed the "Trusted By" section width issue, moved it to the left to adjust in the screen
+8. Updated the text for the Teams>Laura expertise section for the desktop view
+9. Updated the text for the Teams>Laura expertise section for the mobile view
+10. Updated the contact us title from "We are here for you! How can we help?" to "How can we help" for the desktop view
+11. Updated the contact us title from "We are here for you! How can we help?" to "How can we help" for the mobile view
+
+
+12. Implemented the backend code - Set up the backend database
+13. Linked the backend with the database to store the details
+14. Added frontend functionality code to send the request from frontend to the backend
+15. Added backend code to receive the request from the frontend, and further extract the form details from the request, 
+and make a request to store it in the backend
+16. Verified the entire flow and it was working correctly. 
+
+The flow -> 
+Step 1. User fills the form in contact us -> 
+Step 2. The frontend makes an API call to send the form details to the backend ->
+Step 3. Backend receives the form details and further sends it to the database ->
+Step 4. Database stores the user details for eternity
+
+17. Deploying the backend code and using the deployed backend URL in the frontend
+18. Depoying the frontend code to the latest godaddy domain by linking the DNS details, for the latest changes to reflect
